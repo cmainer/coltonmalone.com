@@ -3,9 +3,11 @@
 one:
   title: MyString
   image: MyString
-  content: MyText
+  body: MyText
+  published: false
 
 two:
   title: MyString
   image: MyString
-  content: MyText
+  body: MyText
+  published: false

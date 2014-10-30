@@ -30,6 +30,6 @@ $('.navbar-collapse ul li a').click(function() {
 setTimeout(
   function() 
   {
-    $(".intro-text").fadeTo( 4000, 1 );
+    $(".intro-text").fadeTo( 3000, 1 );
   }, 2000);
 
