@@ -43,6 +43,7 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'slim'
 gem 'bourbon'
+gem 'mailgun_rails'
 
 group :development do
   gem 'spring'

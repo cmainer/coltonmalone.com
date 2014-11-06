@@ -6,6 +6,8 @@ class StaticPagesController < ApplicationController
 
 	def contactme
 		ContactMailer.contactme(params).deliver
+		@posts = Post.limit(3).order("created_at DESC")
+		render "home"
 	end
 
 	def path
