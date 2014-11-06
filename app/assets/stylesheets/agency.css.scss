@@ -534,12 +534,22 @@ aside.clients {
 
 section#contact {
 	background-color: $gray-darkest;
-	background-image: url('../img/map-image.png');
+	// background-image: url('../img/map-image.png');
+	// background-image: url('2014-quebec.jpg');
+	background-image: url('../img/2014-autumn.jpg');
+	// background-image: url('2014-dock.jpg');
+	// background-image: url('2014-volcano.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
+	background-size: cover;
 	.section-heading {
 		color: white;
 	}
+
+	.section-subheading {
+		margin: 20px 0 10px 0;
+	}
+
 	.form-group {
 		margin-bottom: 25px;
 		input,
@@ -603,7 +613,7 @@ footer {
 // Social Buttons
 
 ul.social-buttons {
-	margin-bottom: 0;
+	margin: 25px 0 75px 0;
 	li {
 		a {
 			display: block;
