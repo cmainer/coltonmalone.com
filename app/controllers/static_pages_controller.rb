@@ -5,11 +5,11 @@ class StaticPagesController < ApplicationController
 	end
 
 	def contactme
-		if ContactMailer.contactme(params).deliver
-			respond_to do |format|
-	      format.js {}
-	    end
-	  end
+		ContactMailer.contactme(params).deliver
+		respond_to do |format|
+      format.js {}
+    end
+  
 
 		# @posts = Post.limit(3).order("created_at DESC")
 		# redirect_to root_path
