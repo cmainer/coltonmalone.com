@@ -145,7 +145,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-12">
-				<%= form_tag("/contact", method: "post", id: "contactForm") do %>
+				<%= form_tag("/contact", method: "post", id: "contactForm", remote: true) do %>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
@@ -169,7 +169,7 @@
 						</div>
 						<div class="clearfix"></div>
 							<div class="col-lg-12 text-center">
-								<div id="success"></div>
+								<div id="success" class="">Thanks for reaching out!  I will get back to you soon.</div>
 								<%= submit_tag("Send Message", :class => "btn btn-xl") %>
 							</div>
 						</div>

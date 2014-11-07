@@ -65,6 +65,6 @@ $(function() {
 
 
 /*When clicking on Full hide fail/success boxes */
-$('#contactForm input').focus(function() {
-    $('#success').html('');
-});
+// $('#contactForm #name').focus(function() {
+//     $('#success').addClass('bounceOut');
+// });
