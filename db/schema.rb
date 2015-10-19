@@ -11,35 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020155835) do
+ActiveRecord::Schema.define(version: 20141122052540) do
 
-  create_table "casein_admin_users", force: true do |t|
-    t.string   "login",                           null: false
-    t.string   "name"
-    t.string   "email"
-    t.integer  "access_level",        default: 0, null: false
-    t.string   "crypted_password",                null: false
-    t.string   "password_salt",                   null: false
-    t.string   "persistence_token"
-    t.string   "single_access_token"
-    t.string   "perishable_token"
-    t.integer  "login_count",         default: 0, null: false
-    t.integer  "failed_login_count",  default: 0, null: false
-    t.datetime "last_request_at"
-    t.datetime "current_login_at"
-    t.datetime "last_login_at"
-    t.string   "current_login_ip"
-    t.string   "last_login_ip"
-    t.string   "time_zone"
+  create_table "monologue_posts", force: true do |t|
+    t.boolean  "published"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "content"
+    t.string   "url"
+    t.datetime "published_at"
   end
 
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.string   "image"
-    t.text     "body"
-    t.boolean  "published"
+  add_index "monologue_posts", ["url"], name: "index_monologue_posts_on_url", unique: true, using: :btree
+
+  create_table "monologue_taggings", force: true do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  add_index "monologue_taggings", ["post_id"], name: "index_monologue_taggings_on_post_id", using: :btree
+  add_index "monologue_taggings", ["tag_id"], name: "index_monologue_taggings_on_tag_id", using: :btree
+
+  create_table "monologue_tags", force: true do |t|
+    t.string "name"
+  end
+
+  add_index "monologue_tags", ["name"], name: "index_monologue_tags_on_name", using: :btree
+
+  create_table "monologue_users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

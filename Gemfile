@@ -38,12 +38,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'font-awesome-rails'
 gem 'annotate', '~> 2.6.5'
-gem 'casein', '~> 5.0.0'
 gem 'mail_form'
 gem 'simple_form'
 gem 'slim'
 gem 'bourbon'
 gem 'mailgun_rails'
+gem 'nokogiri'
 
 group :development do
   gem 'spring'
@@ -53,5 +53,3 @@ group :development do
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm', '~> 0.1.1'
 end
-
-
