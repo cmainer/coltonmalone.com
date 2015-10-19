@@ -38,11 +38,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'font-awesome-rails'
 gem 'annotate', '~> 2.6.5'
-gem 'mail_form'
-gem 'simple_form'
 gem 'slim'
 gem 'bourbon'
-gem 'mailgun_rails'
 gem 'nokogiri'
 
 group :development do
