@@ -7,7 +7,7 @@ ask :branch, :master
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '~/www/coltonmalone.com'
-  
+
 # Default value for :scm is :git
 set :scm, :git
 
@@ -15,7 +15,7 @@ set :scm, :git
 set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :info
+set :log_level, :debug
 set :rails_env, "production"
 
 
@@ -69,7 +69,7 @@ namespace :db do
 end
 
 namespace :logs do
-  desc "tail rails logs" 
+  desc "tail rails logs"
   task :tail do
     ################################################################################
     # Sets log level to debug so we can see program output
