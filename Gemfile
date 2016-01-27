@@ -41,6 +41,8 @@ gem 'annotate', '~> 2.6.5'
 gem 'slim'
 gem 'bourbon'
 gem 'nokogiri'
+gem 'passenger'
+
 
 group :development do
   gem 'spring'
