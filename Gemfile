@@ -36,7 +36,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 
-# gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'font-awesome-rails'
 gem 'annotate', '~> 2.6.5'
 gem 'slim'
@@ -44,8 +44,8 @@ gem 'bourbon'
 gem 'nokogiri'
 gem 'passenger'
 
-
 group :development do
+  gem 'web-console', '>= 3.3.0'
   gem 'spring'
   gem 'capistrano', '~> 3.2.0'
   gem 'capistrano-bundler'

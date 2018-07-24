@@ -9,7 +9,11 @@
   <%= csrf_meta_tags %>
 
   <!-- CUSTOM FONTS -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300, 300italic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300, 300italic' rel='stylesheet' type='text/css'> -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:300,400" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' %>
+
 
 </head>
 <body id="<%= yield(:id) %>" class="<%= yield(:class) %>">
@@ -18,7 +22,5 @@
 
 <%= render partial: "shared/footer" %>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js' %>
 </body>
 </html>
