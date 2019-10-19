@@ -1,4 +1,3 @@
-require 'barnes'
 if ENV.fetch("RAILS_ENV") == 'production'
   workers ENV.fetch("WEB_CONCURRENCY") { 2 }
 
@@ -10,7 +9,6 @@ if ENV.fetch("RAILS_ENV") == 'production'
 
     ActiveRecord::Base.connection_pool.disconnect! if defined?(ActiveRecord)
 
-    Barnes.start
   end
 
   on_worker_boot do
