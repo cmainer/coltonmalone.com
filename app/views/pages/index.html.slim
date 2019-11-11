@@ -54,11 +54,12 @@ section#blog
       - else
         - @posts.each do |p|
           .col-md-4.col-xs-12
-            = link_to p[:link], target: "_blank" do
-              .post
-                h3 = p[:title]
-                .date = p[:date]
-                p = p[:content]
+            .card
+              = link_to p[:link], target: "_blank" do
+                .post
+                  h3 = p[:title]
+                  .date = p[:date] > 1.day.ago ? "#{time_ago_in_words(p[:date])} ago" : p[:date].strftime('%b %d, %Y')
+                  p = p[:content]
     .tac.mar50t
       = link_to "More Posts", "https://medium.com/@coltonmalone/latest", target: "_blank", class: "btn btn-primary"
 

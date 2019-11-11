@@ -55,4 +55,5 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.0'
   gem 'capistrano-rails-console'
   gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end

@@ -7,7 +7,8 @@ class PagesController < ApplicationController
     run_sanitizer
     rss.each do |result|
       result = { title: get_title(result.title),
-                 date: get_date(result.pubDate),
+                 # date: get_date(result.pubDate),
+                 date: result.pubDate,
                  link: get_link(result.link),
                  heading: get_heading(result.content_encoded),
                  content: get_content(result.content_encoded) }
@@ -29,9 +30,9 @@ class PagesController < ApplicationController
     title
   end
 
-  def get_date(date)
-    date > 1.day.ago ? "#{time_ago_in_words(date)} ago" : date.strftime('%b %d, %Y')
-  end
+  # def get_date(date)
+  #   date > 1.day.ago ? "#{time_ago_in_words(date)} ago" : date.strftime('%b %d, %Y')
+  # end
 
   def get_link(link)
     link[/[^?]+/]
