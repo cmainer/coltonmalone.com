@@ -39,7 +39,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'font-awesome-rails'
 gem 'annotate', '~> 2.6.5'
 gem 'slim-rails'
